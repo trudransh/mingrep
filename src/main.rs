@@ -1,5 +1,6 @@
 use std::{env, process};
 use mingrep::Config;
+use clap :: {Arg, Command};
 
 fn main() {
     let args : Vec<String> = env::args().collect();
