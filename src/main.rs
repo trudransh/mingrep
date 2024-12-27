@@ -4,12 +4,12 @@ use mingrep::Config;
 fn main() {
     let args : Vec<String> = env::args().collect();
     let config = Config::build(&args).unwrap_or_else(|err| {
-        println!("Problem parsing arguments: {err}");
+        eprintln!("Problem parsing arguments: {err}"); // standard library provides the eprintln! macro that prints to the standard error stream,
         process::exit(1)
     });
     println!("String that we have to find {}", config.query);
     if let Err(e) = mingrep::run(config){
-        println!("Application Error {e}");
+        eprintln!("Application Error {e}"); // * WE are using eprintlin!() macro to print error to standarda error stream not to print it on output.txt which is for standard output
         process::exit(1)
     };    
 }
