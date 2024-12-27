@@ -1,1 +1,4 @@
-Problem parsing arguments: not enough arguments
+String that we have to find is : to
+File in which we are searching is : poem.txt
+Are you nobody, too?
+How dreary to be somebody!
